@@ -165,17 +165,28 @@ document.addEventListener("DOMContentLoaded", () =>{
       const input = li.querySelector('.guest-name-edit');
       const newName = input.value.trim();
 
-      if (newName) {
-        guest.name = newName;
-        guest.isEditing = false;
-        populateGuestList();
-      }else{
+      if (!newName) {
         printMessage("Name cannot be empty.", true);
       }
+      
 
+      const nameExists = guests.some(g => 
+        g.id !== guestId && // Make sure we aren't comparing the guest to itself
+        g.name.toLowerCase() === newName.toLowerCase() && 
+        g.category === guest.category // Compare against the original guest's category
+      );
+
+      if (nameExists) {
+        printMessage(`"${newName}" in ${guest.category} category is already on the list.`, true);
+        return; // Stop the save if a duplicate is found
+      }
+
+      guest.name = newName;
+      guest.isEditing = false;
+      populateGuestList();
     }
-
   }
+
 
   //Event Listeners
   addForm.addEventListener("submit", handleAddGuest);
