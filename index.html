@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Guest List Manager</title>
+
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <!-- Google Fonts preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Google Fonts: Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+
+  </head>
+  <body>
+    <header class="text-center mb-8">
+        <h1 class="text-3xl md:text-4xl font-bold text-gray-900">Event Guest List</h1>
+        <p class="text-gray-900 mt-2">Seamless Guest Management.</p>
+    </header>
+
+    <!-- Form Section -->
+    <section>
+      <form id = "guest-form" class="max-w-sm mx-auto">
+        <div class="mb-5">
+          <label for="name" class="block mb-2 text-sm font-medium text-gray-900 ">Name</label>
+          <input type="name" id="guest-name" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 " placeholder="Enter Guest's Name" required />
+        </div>
+        <div class="mb-5">
+          <label for="guest-category" class="block text-sm font-medium text-slate-600 mb-1">Category</label>
+          <select id="guest-category" class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-500 transition duration-200">
+              <option value="Friend">Friend</option>
+              <option value="Family">Family</option>
+              <option value="Colleague">Colleague</option>
+          </select>
+        </div>        
+        <button type="submit" class="w-full mb-5 md:w-auto font-semibold px-4 py-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-offset-2 transition duration-200 shadow-sm bg-indigo-600 text-white hover:bg-indigo-700 focus:ring-indigo-500">
+          Add Guest
+        </button>
+      </form>
+
+    </section>
+
+    <!-- Alert Section -->
+    <section>
+      <div id="message-area" class="text-center mb-4 font-semibold h-6"></div>
+    </section>
+
+    <!-- Guest List Table Section -->
+     <section>
+      <div>
+        <h2 class="text-xl font-semibold mb-4 text-slate-800">Guest List (<span id="guest-count">0</span>/10)</h2>
+        <ul id="guest-list" class="space-y-3">
+            <!-- Guest are dynamically inserted here -->
+        </ul>
+        </div>
+     </section>
+
+    <script src="src/index.js"></script>
+  </body>
+</html>
