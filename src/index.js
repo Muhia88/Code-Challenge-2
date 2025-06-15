@@ -93,10 +93,10 @@ document.addEventListener("DOMContentLoaded", () =>{
     const name = guestNameInput.value.trim();
     const category = guestCategory.value;
 
-    //Checks if name already exists (case-insensitive)
-    const nameExists = guests.some(guest => guest.name.toLowerCase() === name.toLowerCase());
+    //Checks if name already exists in same category (case-insensitive) 
+    const nameExists = guests.some(guest => guest.name.toLowerCase() === name.toLowerCase() && guest.category === category);
     if (nameExists) {
-    printMessage(`"${name}" is already on the list.`, true);
+    printMessage(`"${name}" in ${category} category is already on the list.`, true);
     return;
     }
 
