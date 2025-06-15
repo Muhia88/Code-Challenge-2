@@ -1,30 +1,32 @@
 
-
+/* Body styles */
 body {
   font-family: "Inter", sans-serif;
   background-color: rgb(250, 250, 250);
 }
-
+/* guest list styles */
 .guest-item {
   transition: all 0.3s ease;
   border-left-width: 4px;
 }
-
+/* Attending styles */
 .guest-item.attending {
   background-color: #ffffff;
   border-left-color: #38b2ac; 
 }
-
+/* Not attending styles */
 .guest-item.not-attending {
   background-color: #f7fafc;
   border-left-color: #f56565; 
 }
 
+/* Extra not attending styles */
 .guest-item.not-attending .guest-name-display {
   text-decoration: line-through;
   opacity: 0.6;
 }
 
+/* General Category Tags */
 .category-tag {
   font-size: 0.75rem;
   padding: 0.125rem 0.5rem;
@@ -33,17 +35,17 @@ body {
   text-transform: uppercase;
   white-space: nowrap;
 }
-
+/* Friend category colors */
 .category-friend {
   background-color: #ebf8ff;
   color: #3182ce;
 }
-
+/* Family category colors */
 .category-family {
   background-color: #f0fff4;
   color: #38a169;
 }
-
+/* Colleague category colors */
 .category-colleague {
   background-color: #faf5ff;
   color: #805ad5;
