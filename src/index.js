@@ -99,7 +99,7 @@ document.addEventListener("DOMContentLoaded", () =>{
       name: name,
       category: category,
       attending: true,
-      timestamp: new Date().toLocaleTimeString([], {hour: "2-digit", minute: "2-digit"}),
+      timestamp: new Date().toLocaleTimeString([], {hour: "2-digit", minute: "2-digit"}), //Sets current Time
       isEditing: false
     };
 
