@@ -14,7 +14,7 @@ This application provides a clean interface for managing event attendees without
 * **Toggle RSVP:** Mark guests as "Attending" or "Not Attending." The UI reflects this status with a strikethrough and color change.
 * **Guest Limit:** The application enforces a maximum of 10 guests and alerts the user if they try to exceed the limit.
 * **Timestamps:** Displays the time each guest was added to the list.
-* **Same Guest Names** Displays Name already exists if same name(case-insensitive) is input
+* **Same Guest Names** Displays Name and Category if guest already exists with same name(case-insensitive) and category as input.
 
 
 ## File Structure
