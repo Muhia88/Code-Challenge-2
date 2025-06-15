@@ -2,9 +2,13 @@
 
 A simple, dynamic, single-page web application for managing an event guest list. This project was built to practice working with forms, capturing user input, and updating the page dynamically using JavaScript — all without refreshing the browser.
 
+
+
 ## Detailed Description
 
 This application provides a clean interface for managing event attendees without any page reloads. All operations are handled dynamically on the client-side.
+
+The code includes Tailwind CSS imported through CDN.
 
 **Key Features:**
 * **Add Guests:** Add guests by name and category (Friend, Family, Colleague).
